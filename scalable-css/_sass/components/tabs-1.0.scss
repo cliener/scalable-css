@@ -1,0 +1,44 @@
+.jsc-tab {
+  &__tab-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+
+  &__tab {
+    display: inline-block;
+
+    a {
+      display: inline-block;
+      padding: 5px;
+      border: 2px solid;
+      border-bottom: 0;
+      background: jsc-colour(neutral, ultra-light-grey);
+      color: jsc-colour(neutral, dark-grey);
+      text-decoration: none;
+      touch-action: manipulation;
+
+      &:hover,
+      &:focus {
+        background: jsc-colour(neutral, dark-grey);
+        border-color: jsc-colour(neutral, dark-grey);
+        color: jsc-colour(neutral, ultra-light-grey);
+      }
+    }
+
+    a:active,
+    &[aria-selected="true"] a {
+      background: jsc-colour(neutral, ultra-light-grey);
+      border-color: jsc-colour(neutral, dark-grey);
+      color: jsc-colour(neutral, dark-grey);
+    }
+  }
+
+  &__tab-panel {
+    border: 2px solid;
+
+    &[aria-hidden="true"] {
+      display: none;
+    }
+  }
+}
