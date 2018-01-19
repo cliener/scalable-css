@@ -1,0 +1,22 @@
+// nav
+
+.jsc-nav {
+  flex-grow: 1;
+  padding: $measure / 4 * 3 $measure;
+  background-color: transparent;
+  text-align: right;
+
+  a {
+    border-color: ter-colour(primary, dark-grape);
+    color: ter-colour(primary, darker-grape);
+    background: ter-colour(primary, lighter-grape);
+
+    &:hover,
+    &:active,
+    &:focus {
+      border-color: ter-colour(primary, dark-grape);
+      color: jsc-colour(neutral, pure-white);
+      background: ter-colour(primary, darker-grape);
+    }
+  }
+}

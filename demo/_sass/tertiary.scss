@@ -1,0 +1,33 @@
+// Tertiary Palette
+// Prefix ter
+
+// Core
+@import "core/variables-1.0";
+@import "core/base-1.0";
+@import "core/typography-1.0";
+@import "core/grid-1.0";
+
+// Components
+
+@import "components/nav-1.0";
+@import "components/palette-1.0";
+@import "components/buttons-1.0";
+@import "components/notifications-1.0";
+@import "components/tabs-1.0";
+
+// Blocks
+
+@import "blocks/header-1.0";
+@import "blocks/content-1.0";
+@import "blocks/footer-1.0";
+
+
+// Tertiary custom styles
+
+@import "tertiary/variables-1.0";
+@import "tertiary/header-1.0";
+@import "tertiary/nav-1.0";
+@import "tertiary/palette-1.0";
+@import "tertiary/buttons-1.0";
+@import "tertiary/tabs-1.0";
+@import "tertiary/footer-1.0";

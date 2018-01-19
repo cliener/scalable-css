@@ -1,0 +1,12 @@
+// header
+
+.jsc-header {
+  display: flex;
+  background: linear-gradient(ter-colour(primary, darker-grape), ter-colour(primary, dark-grape));
+
+  h1 {
+    padding: $measure / 4 * 3 $measure 1.25em;
+    color: jsc-colour(neutral, pure-white);
+    background-color: transparent;
+  }
+}

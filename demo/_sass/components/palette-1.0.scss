@@ -1,0 +1,96 @@
+// Colour Palette
+
+.jsc-palette {
+  border: 1px solid jsc-colour(neutral, pure-black);
+  padding: 0.5em 1em 0.75em;
+  text-align: center;
+  font-size: 0.9em;
+  grid-column-end: span 2;
+
+  * + * {
+    margin-top: 0.5em;
+  }
+
+  &--pure-white {
+    background-color: jsc-colour(neutral, pure-white);
+  }
+
+  &--ultra-light-grey {
+    background-color: jsc-colour(neutral, ultra-light-grey);
+  }
+
+  &--lighter-grey {
+    background-color: jsc-colour(neutral, lighter-grey);
+  }
+
+  &--light-grey {
+    background-color: jsc-colour(neutral, light-grey);
+  }
+
+  &--mid-grey {
+    background-color: jsc-colour(neutral, mid-grey);
+    color: jsc-colour(neutral, pure-white);
+  }
+
+  &--darkish-grey {
+    background-color: jsc-colour(neutral, darkish-grey);
+    color: jsc-colour(neutral, pure-white);
+  }
+
+  &--dark-grey {
+    background-color: jsc-colour(neutral, dark-grey);
+    color: jsc-colour(neutral, pure-white);
+  }
+
+  &--darker-grey {
+    background-color: jsc-colour(neutral, darker-grey);
+    color: jsc-colour(neutral, pure-white);
+  }
+
+  &--pure-black {
+    background-color: jsc-colour(neutral, pure-black);
+    color: jsc-colour(neutral, pure-white);
+  }
+
+  &--light-mint {
+    background-color: jsc-colour(accent, light-mint);
+  }
+
+  &--mint {
+    background-color: jsc-colour(accent, mint);
+    color: jsc-colour(neutral, pure-white);
+  }
+
+  &--dark-mint {
+    background-color: jsc-colour(accent, dark-mint);
+    color: jsc-colour(neutral, pure-white);
+  }
+
+  &--light-corn {
+    background-color: jsc-colour(accent, light-corn);
+  }
+
+  &--corn {
+    background-color: jsc-colour(accent, corn);
+    color: jsc-colour(neutral, pure-white);
+  }
+
+  &--dark-corn {
+    background-color: jsc-colour(accent, dark-corn);
+    color: jsc-colour(neutral, pure-white);
+  }
+
+  &--light-rose {
+    background-color: jsc-colour(accent, light-rose);
+  }
+
+  &--rose {
+    background-color: jsc-colour(accent, rose);
+    color: jsc-colour(neutral, pure-white);
+  }
+
+  &--dark-rose {
+    background-color: jsc-colour(accent, dark-rose);
+    color: jsc-colour(neutral, pure-white);
+  }
+}

@@ -1,0 +1,60 @@
+@mixin jsc-button-base() {
+  display: inline-block;
+  padding: 0.5625em 1.25em;
+  border: 0.125em solid;
+  border-radius: 0.125em;
+  font-size: 1em;
+  // override cursor for anchors
+  cursor: default;
+  text-decoration: none;
+  vertical-align: middle;
+  transition: background 175ms ease-in-out,
+              border-color 175ms ease-in-out,
+              color 175ms ease-in-out;
+}
+
+.jsc-button {
+  @include jsc-button-base();
+
+  color: jsc-colour(neutral, darker-grey);
+  border-color: jsc-colour(neutral, dark-grey);
+
+  &:hover,
+  &:active,
+  &:focus {
+    background: jsc-colour(neutral, dark-grey);
+    color: jsc-colour(neutral, pure-white);
+    border-color: jsc-colour(neutral, pure-black);
+  }
+
+  &--primary {
+    @include jsc-button-base();
+
+    background: jsc-colour(neutral, darkish-grey);
+    color: jsc-colour(neutral, pure-white);
+    border-color: jsc-colour(neutral, dark-grey);
+
+    &:hover,
+    &:active,
+    &:focus {
+      background: jsc-colour(neutral, ultra-light-grey);
+      color: jsc-colour(neutral, darker-grey);
+      border-color: jsc-colour(neutral, pure-black);
+    }
+  }
+
+  &--secondary {
+    @include jsc-button-base();
+
+    color: jsc-colour(neutral, darker-grey);
+    border-color: jsc-colour(neutral, dark-grey);
+
+    &:hover,
+    &:active,
+    &:focus {
+      background: jsc-colour(neutral, dark-grey);
+      color: jsc-colour(neutral, pure-white);
+      border-color: jsc-colour(neutral, pure-black);
+    }
+  }
+}

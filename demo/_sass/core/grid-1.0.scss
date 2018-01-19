@@ -1,0 +1,207 @@
+// Default Grid
+// Use as a baseline unless you need something complex
+
+// No-Grid
+// Default back to flexbox for non-grid browsers.
+.jsc-grid__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 $measure / -2;
+}
+
+.jsc-grid__item {
+  flex-basis: 50%;
+
+  > * {
+    margin: 0 $measure / 2 $measure;
+  }
+
+  &--six,
+  &--seven,
+  &--eight,
+  &--nine,
+  &--ten,
+  &--eleven,
+  &--full {
+    flex-basis: 100%;
+  }
+
+  @media screen and (min-width: $break-espresso) {
+    flex-basis: 8.333%;
+
+    &--two {
+      flex-basis: 16.666%;
+    }
+
+    &--three {
+      flex-basis: 25%;
+    }
+
+    &--four {
+      flex-basis: 33.333%;
+    }
+
+    &--five {
+      flex-basis: 41.666%;
+    }
+
+    &--six {
+      flex-basis: 50%;
+    }
+
+    &--seven {
+      flex-basis: 58.333%;
+    }
+
+    &--eight {
+      flex-basis: 66.666%;
+    }
+
+    &--nine {
+      flex-basis: 75%;
+    }
+
+    &--ten {
+      flex-basis: 83.333%;
+    }
+
+    &--eleven {
+      flex-basis: 91.666%;
+    }
+
+    &--full {
+      flex-basis: 100%;
+    }
+  }
+}
+
+// native CSS grid support
+@supports (display: grid) {
+.jsc-grid__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: $measure;
+  margin: $measure 0;
+
+  @media screen and (min-width: $break-espresso) {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  @media screen and (min-width: $break-cafe-creme) {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+
+.jsc-grid__item {
+  > * {
+    margin: 0;
+  }
+
+  figure,
+  img {
+    max-width: 100%;
+  }
+
+  &--six,
+  &--seven,
+  &--eight,
+  &--nine,
+  &--ten,
+  &--eleven,
+  &--full {
+    grid-column-end: span 2;
+  }
+
+  @media screen and (min-width: $break-espresso) {
+    &--two {
+      grid-column-end: span 1;
+    }
+
+    &--three {
+      grid-column-end: span 2;
+    }
+
+    &--four {
+      grid-column-end: span 2;
+    }
+
+    &--five {
+      grid-column-end: span 3;
+    }
+
+    &--six {
+      grid-column-end: span 3;
+    }
+
+    &--seven {
+      grid-column-end: span 3;
+    }
+
+    &--eight {
+      grid-column-end: span 4;
+    }
+
+    &--nine {
+      grid-column-end: span 4;
+    }
+
+    &--ten {
+      grid-column-end: span 5;
+    }
+
+    &--eleven {
+      grid-column-end: span 6;
+    }
+
+    &--full {
+      grid-column-end: span 6;
+    }
+  }
+
+  @media screen and (min-width: $break-cafe-creme) {
+    &--two {
+      grid-column-end: span 2;
+    }
+
+    &--three {
+      grid-column-end: span 3;
+    }
+
+    &--four {
+      grid-column-end: span 4;
+    }
+
+    &--five {
+      grid-column-end: span 5;
+    }
+
+    &--six {
+      grid-column-end: span 6;
+    }
+
+    &--seven {
+      grid-column-end: span 7;
+    }
+
+    &--eight {
+      grid-column-end: span 8;
+    }
+
+    &--nine {
+      grid-column-end: span 9;
+    }
+
+    &--ten {
+      grid-column-end: span 10;
+    }
+
+    &--eleven {
+      grid-column-end: span 11;
+    }
+
+    &--full {
+      grid-column-end: span 12;
+    }
+  }
+}
+}

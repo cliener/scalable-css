@@ -1,0 +1,17 @@
+// Header
+
+.jsc-header {
+  h1 {
+    margin: 0;
+    // $measure keeps us in sync with other sections
+    // em allows as to change font-size at leisure
+    padding: 0.5em $measure 0.625em;
+    background: jsc-colour(neutral, dark-grey);
+    color: jsc-colour(neutral, pure-white);
+    font-size: 1.4em;
+  }
+
+  a {
+    color: jsc-colour(neutral, dark-grey);
+  }
+}

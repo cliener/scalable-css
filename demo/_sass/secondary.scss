@@ -1,0 +1,160 @@
+// Secondary palette
+// Prefix: sec
+
+// import common styles
+@import "all";
+
+// Colour palette
+
+// http://paletton.com/#uid=23G0u0kl7mdaFxYg3rqpYhwvmb+
+$sec-palette: (
+  primary: (
+    cool-blue: #2f4a75,
+    dark-cool-blue: #18335c,
+    darker-cool-blue: #071d3f,
+    light-cool-blue: #4f6890,
+    lighter-cool-blue: #798eae,
+  ),
+  secondary: (
+    tan: #b1873c,
+    dark-tan: #8b621a,
+    darker-tan: #603e02,
+    light-tan: #dab36d,
+    lighter-tan: #ffe0aa,
+  ),
+);
+
+@function sec-colour($group, $name) {
+  @return colour($sec-palette, $group, $name);
+}
+
+// header
+
+.jsc-header {
+  h1 {
+    background-color: sec-colour(primary, dark-cool-blue);
+    color: jsc-colour(neutral, pure-white);
+  }
+
+  a {
+    color: sec-colour(primary, darker-cool-blue);
+  }
+}
+
+// nav
+
+.jsc-nav {
+  background-color: sec-colour(primary, light-cool-blue);
+
+  a {
+    border-color: sec-colour(primary, dark-cool-blue);
+    color: sec-colour(primary, darker-cool-blue);
+    background-color: sec-colour(primary, lighter-cool-blue);
+
+    &:hover,
+    &:active,
+    &:focus {
+      border-color: sec-colour(primary, darker-cool-blue);
+      color: sec-colour(primary, lighter-cool-blue);
+      background-color: sec-colour(primary, dark-cool-blue);
+    }
+  }
+}
+
+// Palette
+.sec-palette {
+  &--cool-blue {
+    background-color: sec-colour(primary, cool-blue);
+    color: jsc-colour(neutral, pure-white);
+  }
+
+  &--dark-cool-blue {
+    background-color: sec-colour(primary, dark-cool-blue);
+    color: jsc-colour(neutral, pure-white);
+  }
+
+  &--darker-cool-blue {
+    background-color: sec-colour(primary, darker-cool-blue);
+    color: jsc-colour(neutral, pure-white);
+  }
+
+  &--light-cool-blue {
+    background-color: sec-colour(primary, light-cool-blue);
+    color: jsc-colour(neutral, pure-white);
+  }
+
+  &--lighter-cool-blue {
+    background-color: sec-colour(primary, lighter-cool-blue);
+  }
+
+  &--tan {
+    background-color: sec-colour(secondary, tan);
+  }
+
+  &--dark-tan {
+    background-color: sec-colour(secondary, dark-tan);
+    color: jsc-colour(neutral, pure-white);
+  }
+
+  &--darker-tan {
+    background-color: sec-colour(secondary, darker-tan);
+    color: jsc-colour(neutral, pure-white);
+  }
+
+  &--light-tan {
+    background-color: sec-colour(secondary, light-tan);
+  }
+
+  &--lighter-tan {
+    background-color: sec-colour(secondary, lighter-tan);
+  }
+}
+
+// Buttons
+
+.jsc-button {
+  @include jsc-button-base();
+
+  color: sec-colour(primary, darker-cool-blue);
+  border-color: sec-colour(primary, dark-cool-blue);
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: sec-colour(primary, dark-cool-blue);
+    color: jsc-colour(neutral, pure-white);
+    border-color: jsc-colour(neutral, pure-black);
+  }
+
+  &--primary {
+    @include jsc-button-base();
+
+    background-color: sec-colour(primary, dark-cool-blue);
+    color: jsc-colour(neutral, pure-white);
+    border-color: sec-colour(primary, dark-cool-blue);
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: sec-colour(primary, lighter-cool-blue);
+      color: jsc-colour(neutral, darker-grey);
+      border-color: jsc-colour(neutral, pure-black);
+    }
+  }
+
+  &--secondary {
+    @include jsc-button-base();
+
+    background-color: sec-colour(secondary, lighter-tan);
+    color: sec-colour(secondary, darker-tan);
+    border-color: sec-colour(secondary, tan);
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: sec-colour(secondary, dark-tan);
+      color: jsc-colour(neutral, pure-white);
+      border-color: sec-colour(secondary, darker-tan);
+    }
+  }
+}

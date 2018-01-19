@@ -1,0 +1,16 @@
+// Footer .f-
+
+.jsc-footer {
+  padding: 0.375em $measure 0.5em;
+  background: jsc-colour(neutral, dark-grey);
+  color: jsc-colour(neutral, ultra-light-grey);
+  font-size: 0.8em;
+
+  p {
+    margin: 0;
+
+    + p {
+      margin-top: 0.5em;
+    }
+  }
+}

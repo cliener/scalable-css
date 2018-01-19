@@ -1,0 +1,38 @@
+@mixin jsc-notification-base() {
+  margin-bottom: 1em;
+  padding: 0.5625em 0.75em;
+  border: 0.1em solid;
+  border-radius: 0.25em;
+
+  * {
+    margin: 0;
+
+    + * {
+      margin-top: 1em;
+    }
+  }
+}
+
+.jsc-notification {
+  @include jsc-notification-base();
+
+  background: jsc-colour(accent, light-mint);
+  color: jsc-colour(accent, dark-mint);
+  border-color: jsc-colour(accent, mint);
+
+  &--warning {
+    @include jsc-notification-base();
+
+    background: jsc-colour(accent, light-corn);
+    color: jsc-colour(accent, dark-corn);
+    border-color: jsc-colour(accent, corn);
+  }
+
+  &--alert {
+    @include jsc-notification-base();
+
+    background: jsc-colour(accent, light-rose);
+    color: jsc-colour(accent, dark-rose);
+    border-color: jsc-colour(accent, rose);
+  }
+}

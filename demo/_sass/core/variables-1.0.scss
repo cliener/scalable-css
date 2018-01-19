@@ -1,0 +1,112 @@
+// Site wide variables
+
+// Break Points
+// Named after different coffee sizes with variants
+
+$break-ristretto: 320px;
+$break-espresso: 480px;
+$break-galao: 600px;
+$break-doppio: 720px;
+$break-cafe-creme: 900px;
+$break-lungo: 1080px;
+$break-mocha: 1200px;
+$break-black-eye: 1440px;
+
+// Measure of all things
+
+$measure: 24px;
+
+// Colours
+
+$jsc-palette: (
+  neutral: (
+    pure-white: #fff,
+    ultra-light-grey: #e5e5e5,
+    lighter-grey: #ccc,
+    light-grey: #b2b2b2,
+    mid-grey: #808080,
+    darkish-grey: #737373,
+    dark-grey: #4d4d4d,
+    darker-grey: #262626,
+    pure-black: #000,
+  ),
+  accent: (
+    light-mint: #99e6cc,
+    mint: #28765c,
+    dark-mint: #01402b,
+    light-corn: #fffbaa,
+    corn: #b1ab3c,
+    dark-corn: #605b02,
+    light-rose: #faa,
+    rose: #b13c3c,
+    dark-rose: #600202,
+  )
+);
+
+// Return colour value from given palette map
+//@function colour($group, $name, $palette) {
+@function colour($palette, $group, $name) {
+  $colour: map-get(map-get($palette, $group), $name);
+
+  // if the colour isn't found in the provided palette, throw an error
+  @if $colour == null {
+    @error "Colour #{$name} not found in this palette #{$group}.";
+  }
+
+  @return $colour;
+}
+
+@function jsc-colour($group, $name) {
+  @return colour($jsc-palette, $group, $name);
+}
+
+// Fonts
+
+// Open Sans Light
+@font-face {
+  font-family: "OpenSans-Light";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Open Sans Light"), local("OpenSans-Light"),
+       url("../fonts/opensans-light.woff2") format("woff2"), /* Super Modern Browsers */
+       url("../fonts/opensans-light.woff") format("woff"), /* Modern Browsers */
+       url("../fonts/opensans-light.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+
+/* Open Sans Regular */
+@font-face {
+  font-family: "OpenSans-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Open Sans"), local("OpenSans"),
+       url("../fonts/opensans-regular.woff2") format("woff2"), /* Super Modern Browsers */
+       url("../fonts/opensans-regular.woff") format("woff"), /* Modern Browsers */
+       url("../fonts/opensans-regular.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+
+/* Open Sans Semi-Bold */
+@font-face {
+  font-family: "OpenSans-Semibold";
+  font-style: normal;
+  font-weight: 600;
+  src: local("Open Sans Semibold"), local("OpenSans-Semibold"),
+       url("../fonts/opensans-semibold.woff2") format("woff2"), /* Super Modern Browsers */
+       url("../fonts/opensans-semibold.woff") format("woff"), /* Modern Browsers */
+       url("../fonts/opensans-semibold.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+
+/* Open Sans Bold */
+@font-face {
+  font-family: "OpenSans-Bold";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Open Sans Bold"), local("OpenSans-Bold"),
+       url("../fonts/opensans-bold.woff2") format("woff2"), /* Super Modern Browsers */
+       url("../fonts/opensans-bold.woff") format("woff"), /* Modern Browsers */
+       url("../fonts/opensans-bold.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+
+$open-sans-light: "OpenSans-Light", "Helvetica Neue", Helvetica, tahoma, geneva, arial, sans-serif;
+$open-sans-regular: "OpenSans-Regular", "Helvetica Neue", Helvetica, tahoma, geneva, arial, sans-serif;
+$open-sans-semibold: "OpenSans-Semibold", "Helvetica Neue", Helvetica, tahoma, geneva, arial, sans-serif;
+$open-sans-bold: "OpenSans-Bold", "Helvetica Neue", Helvetica, tahoma, geneva, arial, sans-serif;

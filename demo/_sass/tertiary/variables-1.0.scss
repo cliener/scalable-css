@@ -1,0 +1,25 @@
+$ter-palette: (
+  primary: (
+    grape: #9c3558,
+    lighter-grape: #e397b1,
+    light-grape: #c16081,
+    dark-grape: #7b1739,
+    darker-grape: #54021e,
+  ),
+  secondary: (
+    forest: #2a7b54,
+    lighter-forest: #7ab699,
+    light-forest: #4c9873,
+    dark-forest: #12613b,
+    deep-forest: #014323,
+    lime: #9bac3a,
+    lighter-lime: #ebf8a5,
+    light-lime: #c4d46a,
+    dark-lime: #77871a,
+    darker-lime: #4f5d02,
+  ),
+);
+
+@function ter-colour($group, $name) {
+  @return colour($ter-palette, $group, $name);
+}

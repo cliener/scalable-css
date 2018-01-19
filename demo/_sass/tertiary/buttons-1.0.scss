@@ -1,0 +1,49 @@
+// Buttons
+
+.jsc-button {
+  @include jsc-button-base();
+
+  background-color: ter-colour(primary, lighter-grape);
+  color: ter-colour(primary, darker-grape);
+  border-color: ter-colour(primary, dark-grape);
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: ter-colour(primary, dark-grape);
+    color: jsc-colour(neutral, pure-white);
+    border-color: ter-colour(primary, darker-grape);
+  }
+
+  &--primary {
+    @include jsc-button-base();
+
+    background-color: ter-colour(primary, dark-grape);
+    color: jsc-colour(neutral, pure-white);
+    border-color: ter-colour(primary, dark-grape);
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: jsc-colour(neutral, pure-white);
+      color: ter-colour(primary, dark-grape);
+      border-color: ter-colour(primary, grape);
+    }
+  }
+
+  &--secondary {
+    @include jsc-button-base();
+
+    background-color: ter-colour(secondary, lighter-lime);
+    color: ter-colour(secondary, darker-lime);
+    border-color: ter-colour(secondary, lime);
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: ter-colour(secondary, dark-lime);
+      color: jsc-colour(neutral, pure-white);
+      border-color: ter-colour(secondary, darker-lime);
+    }
+  }
+}

@@ -1,0 +1,25 @@
+// Base
+
+// Border-box for all because Chris Coyier and Paul Irish said so.
+// See https://css-tricks.com/international-box-sizing-awareness-day/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+// Make it clear that checkboxes can be interacted with
+input[type="checkbox"] {
+  cursor: pointer;
+}

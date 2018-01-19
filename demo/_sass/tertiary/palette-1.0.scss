@@ -1,0 +1,72 @@
+// Palette
+
+.ter-palette {
+  &--grape {
+    background-color: ter-colour(primary, grape);
+    color: jsc-colour(neutral, pure-white);
+  }
+
+  &--lighter-grape {
+    background-color: ter-colour(primary, lighter-grape);
+  }
+
+  &--light-grape {
+    background-color: ter-colour(primary, light-grape);
+  }
+
+  &--dark-grape {
+    background-color: ter-colour(primary, dark-grape);
+    color: jsc-colour(neutral, pure-white);
+  }
+
+  &--darker-grape {
+    background-color: ter-colour(primary, darker-grape);
+    color: jsc-colour(neutral, pure-white);
+  }
+
+  &--forest {
+    background-color: ter-colour(secondary, forest);
+    color: jsc-colour(neutral, pure-white);
+  }
+
+  &--lighter-forest {
+    background-color: ter-colour(secondary, lighter-forest);
+  }
+
+  &--light-forest {
+    background-color: ter-colour(secondary, light-forest);
+  }
+
+  &--dark-forest {
+    background-color: ter-colour(secondary, dark-forest);
+    color: jsc-colour(neutral, pure-white);
+  }
+
+  &--deep-forest {
+    background-color: ter-colour(secondary, deep-forest);
+    color: jsc-colour(neutral, pure-white);
+  }
+
+  &--lime {
+    background-color: ter-colour(secondary, lime);
+    color: jsc-colour(neutral, pure-white);
+  }
+
+  &--lighter-lime {
+    background-color: ter-colour(secondary, lighter-lime);
+  }
+
+  &--light-lime {
+    background-color: ter-colour(secondary, light-lime);
+  }
+
+  &--dark-lime {
+    background-color: ter-colour(secondary, dark-lime);
+    color: jsc-colour(neutral, pure-white);
+  }
+
+  &--darker-lime {
+    background-color: ter-colour(secondary, darker-lime);
+    color: jsc-colour(neutral, pure-white);
+  }
+}
