@@ -1,0 +1,21 @@
+# Default application configuration that all configurations inherit from.
+linters:
+  BemDepth:
+    enabled: true
+
+  LeadingZero:
+    enabled: true
+    style: include_zero
+
+  PropertySortOrder:
+    enabled: false
+
+  QualifyingElement:
+    enabled: false
+
+  SelectorFormat:
+    convention: 'strict_BEM'
+
+  StringQuotes:
+    style: double_quotes # or single_quotes
+
