@@ -13,10 +13,10 @@
   "author": "Chris Lienert",
   "license": "MIT",
   "dependencies": {
-    "browser-sync": "^2.24.4",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^5.0.0",
-    "gulp-sass": "^4.0.1",
-    "hoek": "^4.2.1"
+    "browser-sync": "^2.26.3",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-sass": "^4.0.2",
+    "hoek": "^6.1.2"
   }
 }
