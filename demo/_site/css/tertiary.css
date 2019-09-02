@@ -510,7 +510,6 @@ blockquote {
   display: -ms-flexbox;
   display: flex;
   background: -webkit-gradient(linear, left top, left bottom, from(#54021e), to(#7b1739));
-  background: -webkit-linear-gradient(#54021e, #7b1739);
   background: -o-linear-gradient(#54021e, #7b1739);
   background: linear-gradient(#54021e, #7b1739); }
   .jsc-header h1 {
@@ -694,6 +693,5 @@ blockquote {
 .jsc-footer {
   padding: 12px 24px;
   background: -webkit-gradient(linear, left top, left bottom, from(#2a7b54), to(#4c9873));
-  background: -webkit-linear-gradient(#2a7b54, #4c9873);
   background: -o-linear-gradient(#2a7b54, #4c9873);
   background: linear-gradient(#2a7b54, #4c9873); }
